@@ -15,8 +15,12 @@ export default class extends BaseSchema {
 
     })
   }
-
+  
   public async down() {
     this.schema.dropTable(this.tableName)
   }
 }
+/*REGRAS DE NEGÓCIO
+  => email unico
+   => NÃO é permitido usar o mesmo email para uma conta de administrador, estabelecimento e cliente.
+*/
