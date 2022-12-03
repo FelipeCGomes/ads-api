@@ -8,10 +8,11 @@ export default class extends BaseSchema {
       table.increments('id').primary()
       table.string('email', 255).notNullable().unique()
       table.string('password', 180).notNullable()
+      table.string('tipo', 20).notNullable() //Tipo de usuario (admin, estabelecimento,cliente)
       table.string('remember_me_token').nullable()
 
-      table.timestamp('created_at', { useTz: true }).notNullable()
-      table.timestamp('updated_at', { useTz: true }).notNullable()
+      table.timestamps(true, true)
+
     })
   }
 
