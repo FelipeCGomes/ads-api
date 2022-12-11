@@ -6,9 +6,9 @@ export default class extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id').primary();
-      table.string('nome', 45).notNullable();
+      table.string('nome').notNullable();
       table
-        .increments('estado_id')//ligação com a table estado
+        .integer('estado_id')//ligação com a table estado
         .unsigned()
         .notNullable()
         .references('id')

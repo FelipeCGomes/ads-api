@@ -9,7 +9,7 @@ export default class Admin extends BaseModel {
   public userId: number // chave key db -> pode ser que precise alterar para user_id
 
   @column()
-  public name: string;
+  public nome: string;
 
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
